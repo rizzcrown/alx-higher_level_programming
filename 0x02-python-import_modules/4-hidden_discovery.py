@@ -2,7 +2,6 @@
 if __name__ == '__main__':
     import hidden_4
 
-    var_names = [name for name in dir(hidden_4) if not name.startswith('__') 
-            and not callable(getattr(hidden_4, name)) ]
+    var_names = [name for name in dir(hidden_4) if name.isidentifier()]
 
     print(var_names)

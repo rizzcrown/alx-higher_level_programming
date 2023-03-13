@@ -5,6 +5,10 @@ my_list = [1, 2, 3, 4, 5]
 idx = 3
 new_element = 9
 new_list = new_in_list(my_list, idx, new_element)
+neg_list = new_in_list(my_list, -2, 13)
+of_range = new_in_list(my_list, 50, 13)
 
-print(my_list)
 print(new_list)
+print(my_list)
+print(of_range)
+print(neg_list)

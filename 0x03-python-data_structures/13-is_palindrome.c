@@ -4,7 +4,7 @@
 #include <stdbool.h>
 
 /* Function to find the middle node of the linked list */
-struct node* findMiddle(struct node* head) {
+listint_t* findMiddle(listint_t* head) {
     listint_t* slow_ptr = head;
     listint_t* fast_ptr = head;
 
@@ -17,7 +17,7 @@ struct node* findMiddle(struct node* head) {
 }
 
 /* Function to reverse the linked list */
-struct node* reverseList(struct node* head) {
+listint_t* reverseList(listint_t* head) {
     listint_t* prev = NULL;
     listint_t* curr = head;
     listint_t* next = NULL;

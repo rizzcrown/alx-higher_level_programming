@@ -4,9 +4,9 @@
 #include <stdbool.h>
 
 /* Function to find the middle node of the linked list */
-listint_t* findMiddle(listint_t* head) {
-    listint_t* slow_ptr = head;
-    listint_t* fast_ptr = head;
+listint_t* findMiddle(listint_t** head) {
+    listint_t* slow_ptr = *head;
+    listint_t* fast_ptr = *head;
 
     while(fast_ptr != NULL && fast_ptr->next != NULL) {
         fast_ptr = fast_ptr->next->next;
@@ -36,7 +36,7 @@ listint_t* reverseList(listint_t* head) {
 int is_palindrome(listint_t **head) {
     listint_t* middle_node = findMiddle(head);
     listint_t* second_half = reverseList(middle_node);
-    listint_t* first_half = head;
+    listint_t* first_half = *head;
 
     while(second_half != NULL) {
         if(first_half->n != second_half->n) {
